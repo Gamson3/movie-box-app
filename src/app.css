@@ -1,0 +1,19 @@
+/* src/app.css */
+@import 'tailwindcss';
+
+/* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+html, body {
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .movies-grid {
+    @apply grid gap-6 w-full box-border justify-start;
+    grid-template-columns: repeat(auto-fit, minmax(180px, max-content));
+  }
+}
