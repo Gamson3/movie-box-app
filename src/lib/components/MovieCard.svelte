@@ -42,7 +42,7 @@ async function toggleFavourite(event: MouseEvent) {
     const success = await addFavourite(movie);
     if (!success) {
       favStore.set(current); // rollback
-      alert("Failed to add favourite");
+      console.log("Failed to add favourite");
     }
   }
 }
