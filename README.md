@@ -1,6 +1,6 @@
 # 🎬 MovieBox
 
-MovieBox is a modern movie discovery web application built with **SvelteKit**, integrating **Firebase** and **The Movie Database (TMDB)** API. It allows users to search for movies, view detailed information, and manage a personalized list of favourites.
+MovieBox is a movie discovery web application built with **SvelteKit**, integrating **Firebase** and **The Movie Database (TMDB)** API. It allows users to search for movies, view detailed information, and manage a personalized list of favourites.
 
 ---
 
@@ -31,22 +31,27 @@ Each major feature—authentication, search, movie detail, favourites—is encap
 
 src/
 ├── lib/
-│   ├── api/                    # API clients (Firebase, TMDB, Favourites)
-│   ├── components/             # UI components (MovieList, MediaDetails, Pagination)
-│   ├── firebase/               # Firebase config and utilities
-│   ├── stores/                 # Svelte stores (user)
-│   └── types/                  # TypeScript types
+│   ├── api/                  # API clients (Firebase, TMDB, Favourites)
+│   ├── components/           # UI components (MovieList, MediaDetails, Pagination)
+│   ├── firebase/             # Firebase config and utilities
+│   ├── stores/               # Svelte stores (user)
+│   └── types/                # TypeScript types
 │
 ├── routes/
 |   ├── (pages)/
-|   │   ├── about/              # About page
-|   │   ├── auth/               # Login & Signup page
-|   │   ├── contact/            # Placeholder contact page
-|   │   ├── favourites/         # Protected favourites list
-|   │   └── search/             # Search results and API calls
+|   │   ├── about/            # About page
+|   │   ├── auth/             # Login & Signup page
+|   │   ├── contact/          # Placeholder contact page
+|   │   ├── favourites/       # Protected favourites list
+|   │   └── search/           # Search results and API calls
 |   |
-│   ├── movie/\[id]/            # Dynamic movie detail page
-│   └── api/                    # Server endpoints (search, favourites)
+│   ├── movie/[id]/           # Dynamic movie detail page
+│   ├── tv/[id]/              # Dynamic Tv Show detail page (not yet linked in homepage)
+│   ├── api/                  # Server endpoints (search, favourites)
+│   ├── +layout.svelte        # Defines the root layout used across all pages
+│   ├── +page.svelte          # Main landing page (e.g., homepage)
+│   ├── +page.ts              # Server-side load function for the landing page
+│   └── +error.svelte         # Custom error page for handling thrown errors
 
 ````
 
